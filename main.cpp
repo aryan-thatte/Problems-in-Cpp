@@ -41,16 +41,16 @@ int main() {
             for (int yay = x + 1; cards.at(yay) != 'H'; yay++) {
                 D[yay] = cards.at(yay);
                 if (cards.at(yay) == 'J') {
-                    Cscore += 1;
+                    Dscore += 1;
                 }
                 if (cards.at(yay) == 'Q') {
-                    Cscore += 2;
+                    Dscore += 2;
                 }
                 if (cards.at(yay) == 'K') {
-                    Cscore += 3;
+                    Dscore += 3;
                 }
                 if (cards.at(yay) == 'A') {
-                    Cscore += 4;
+                    Dscore += 4;
                 }
             }
         }
@@ -58,16 +58,16 @@ int main() {
             for (int yay = x + 1; cards.at(yay) != 'S'; yay++) {
                 H[yay] = cards.at(yay);
                 if (cards.at(yay) == 'J') {
-                    Cscore += 1;
+                    Hscore += 1;
                 }
                 if (cards.at(yay) == 'Q') {
-                    Cscore += 2;
+                    Hscore += 2;
                 }
                 if (cards.at(yay) == 'K') {
-                    Cscore += 3;
+                    Hscore += 3;
                 }
                 if (cards.at(yay) == 'A') {
-                    Cscore += 4;
+                    Hscore += 4;
                 }
             }
         }
@@ -75,16 +75,16 @@ int main() {
             for (int yay = x + 1; x != cards.length(); yay++) {
                 S[yay] = cards.at(yay);
                 if (cards.at(yay) == 'J') {
-                    Cscore += 1;
+                    Sscore += 1;
                 }
                 if (cards.at(yay) == 'Q') {
-                    Cscore += 2;
+                    Sscore += 2;
                 }
                 if (cards.at(yay) == 'K') {
-                    Cscore += 3;
+                    Sscore += 3;
                 }
                 if (cards.at(yay) == 'A') {
-                    Cscore += 4;
+                    Sscore += 4;
                 }
             }
         }
