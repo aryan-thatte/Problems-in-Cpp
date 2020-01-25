@@ -5,7 +5,7 @@
 #include <vector>
 using namespace std;
 
-int main() {
+int S101() {
     
     string cards;
     vector <char> C (13);
@@ -88,7 +88,6 @@ int main() {
                 }
             }
         }
-             
     }
 
     cout << "Clubs ";
