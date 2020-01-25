@@ -5,7 +5,9 @@
 #include <vector>
 using namespace std;
 
-int S101() {
+
+/*
+int CCCS101() {
     
     string cards;
     vector <char> C (13);
@@ -96,4 +98,17 @@ int S101() {
     }
     
     return 0;
+}
+*/
+
+int CCCS118() {
+    int topLeft = 1;
+    int topRight = 2;
+    int bottomLeft = 3;
+    int bootomRight = 4;
+    string flips;
+
+    cin >> flips;
+
+    for
 }
