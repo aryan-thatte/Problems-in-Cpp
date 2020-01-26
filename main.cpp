@@ -3,7 +3,17 @@
 #include <cstdlib>
 #include <string>
 #include <vector>
+void CCCS101();
+
+void CCCS119();
+void CCCS219();
+
 using namespace std;
+
+// CALL IT
+int main () {
+    CCCS219();
+}
 
 // Not work
 void CCCS101() {
@@ -146,12 +156,25 @@ void CCCS119() {
     cout << bottomLeft << " " << bottomRight << endl;
 }
 
-//
+// Working
 void CCCS219() {
+    int N = 0;
+    int A = 0;
+    int B = 0;
 
+    cin >> N;
+    vector <int> Ni (N);
+
+    for (int x = 0; x < N; x++) {
+        cin >> Ni[x];
+    }
+
+    for (int x = 0; x < N; x++) {
+        
+    }
+
+    for (int x = 0; x < N; x++) {
+        cout << A << " " << B << endl;
+    }
 }
 
-// Call it
-int main () {
-    
-}
