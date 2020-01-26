@@ -156,7 +156,7 @@ void CCCS119() {
     cout << bottomLeft << " " << bottomRight << endl;
 }
 
-// Working
+// Unifinished
 void CCCS219() {
     int N = 0;
     int A = 0;
@@ -169,12 +169,25 @@ void CCCS219() {
         cin >> Ni[x];
     }
 
-    for (int x = 0; x < N; x++) {
-        
-    }
+    cout << Ni[0] << Ni[1] << Ni[2] << Ni[3] << endl;
 
     for (int x = 0; x < N; x++) {
-        cout << A << " " << B << endl;
+        for (int y = 2; y < Ni[x] / 2; y++) {
+            if (Ni[x] % y == 0) {
+                
+            }
+            else {
+                A = Ni[x];
+                break;
+            }
+        }
+        cout << A;
     }
+
+    
+
+    /*for loop here
+    cout << A << " " << B << endl;
+    */
 }
 
