@@ -3,16 +3,17 @@
 #include <cstdlib>
 #include <string>
 #include <vector>
-void CCCS101();
+using namespace std;
 
+void CCCS101();
 void CCCS119();
 void CCCS219();
+void CCCS319();
 
-using namespace std;
 
 // CALL IT
 int main () {
-    CCCS219();
+    CCCS319();
 }
 
 // Not work
@@ -191,3 +192,136 @@ void CCCS219() {
     */
 }
 
+// Unfinished
+void CCCS319() {
+    vector <int> r1 (3);
+    vector <int> r2 (3);
+    vector <int> r3 (3);
+    vector <string> Sr1 (3);
+    vector <string> Sr2 (3);
+    vector <string> Sr3 (3);
+    
+    for (int x = 0; x < 3; x++) {
+        cin >> Sr1[x];
+        if (Sr1[x] != "X") {
+            r1[x] = stoi(Sr1[x]);
+        }
+    }
+    for (int x = 0; x < 3; x++) {
+        cin >> Sr2[x];
+        if (Sr2[x] != "X") {
+            r2[x] = stoi(Sr2[x]);
+        }
+    }
+    for (int x = 0; x < 3; x++) {
+        cin >> Sr3[x];
+        if (Sr3[x] != "X") {
+            r3[x] = stoi(Sr3[x]);
+        }
+    }
+
+    cout << endl;
+    
+    for (int x = 0; x < 3; x++) {
+        if (Sr1[x] == "X") {
+            if (x == 0) {
+                if (Sr1[1] != "X" && Sr1[2] != "X") {
+                    r1[0] = r1[1] - (r1[2] - r1[1]);
+                    Sr1[0] = to_string(r1[0]);
+                }
+                else if (Sr2[0] != "X" && Sr3[0] != "X") {
+                    r1[0] = r2[0] - (r3[0] - r2[0]);
+                    Sr1[0] = to_string(r1[0]);
+                }
+            }
+            if (x == 1) {
+                if (Sr1[0] != "X" && Sr1[2] != "X") {
+                    r1[1] = (r1[2] + r1[0]) / 2;
+                    Sr1[1] = to_string(r1[1]);
+                }
+                else if (Sr2[1] != "X" && Sr3[1] != "X") {
+                    r1[1] = r2[1] - (r3[1] - r2[1]);
+                    Sr1[1] = to_string(r1[1]);
+                }
+            }
+            if (x == 2) {
+                if (Sr1[0] != "X" && Sr1[1] != "X") {
+                    r1[2] = r1[1] + (r1[1] - r1[0]);
+                    Sr1[2] = to_string(r1[2]);
+                }
+                else if (Sr2[2] != "X" && Sr3[2] != "X") {
+                    r1[2] = r2[1] - (r3[2] - r2[2]);
+                    Sr1[2] = to_string(r1[2]);
+                }
+            }
+        }
+        if (Sr2[x] == "X") {
+            if (x == 0) {
+                if (Sr2[1] != "X" && Sr2[2] != "X") {
+                    r2[0] = r2[1] - (r2[2] - r2[1]);
+                    Sr2[0] = to_string(r2[0]);
+                }
+                else if (Sr1[0] != "X" && Sr3[0] != "X") {
+                    r2[0] = (r1[0] + r3[0]) / 2;
+                    Sr2[0] = to_string(r2[0]);
+                }
+            }
+            if (x == 1) {
+                if (Sr2[0] != "X" && Sr2[2] != "X") {
+                    r2[1] = (r2[2] + r2[0]) / 2;
+                    Sr2[1] = to_string(r2[1]);
+                }
+                else if (Sr1[1] != "X" && Sr3[1] != "X") {
+                    r2[1] = (r1[1] + r3[1]) / 2;
+                    Sr2[1] = to_string(r2[1]);
+                }
+            }
+            if (x == 2) {
+                if (Sr2[0] != "X" && Sr2[1] != "X") {
+                    r2[2] = r2[1] + (r2[1] - r2[0]);
+                    Sr2[2] = to_string(r2[2]);
+                }
+                else if (Sr1[2] != "X" && Sr3[2] != "X") {
+                    r2[2] = (r1[2] + r3[2]) / 2;
+                    Sr2[2] = to_string(r2[2]);
+                }
+            }
+        }
+        if (Sr3[x] == "X") {
+            if (x == 0) {
+                if (Sr3[1] != "X" && Sr3[2] != "X") {
+                    r3[0] = r3[1] - (r3[2] - r3[1]);
+                    Sr3[0] = to_string(r3[0]);
+                }
+                else if (Sr1[0] != "X" && Sr2[0] != "X") {
+                    r3[0] = r2[0] + (r2[0] - r1[0]);
+                    Sr3[0] = to_string(r1[0]);
+                }
+            }
+            if (x == 1) {
+                if (Sr3[0] != "X" && Sr3[2] != "X") {
+                    r3[1] = (r3[0] + r3[2]) / 2;
+                    Sr3[1] = to_string(r3[1]);
+                }
+                else if (Sr1[1] != "X" && Sr2[1] != "X") {
+                    r3[1] = r2[1] + (r2[1] - r1[1]);
+                    Sr3[1] = to_string(r3[1]);
+                }
+            }
+            if (x == 2) {
+                if (Sr3[0] != "X" && Sr3[1] != "X") {
+                    r3[2] = r3[1] + (r3[1] - r3[0]);
+                    Sr3[2] = to_string(r3[2]);
+                }
+                else if (Sr1[2] != "X" && Sr2[2] != "X") {
+                    r3[2] = r2[2] + (r2[2] - r1[2]);
+                    Sr3[2] = to_string(r3[2]);
+                }
+            }
+        }
+    }
+
+    cout << r1[0] << " " << r1[1] << " " << r1[2] << endl;
+    cout << r2[0] << " " << r2[1] << " " << r2[2] << endl;
+    cout << r3[0] << " " << r3[1] << " " << r3[2] << endl;
+}
