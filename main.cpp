@@ -6,14 +6,16 @@
 using namespace std;
 
 void CCCS101();
+
+void CCCJ318();
+
 void CCCS119();
 void CCCS219();
 void CCCS319();
 
-
 // CALL IT
 int main () {
-    CCCS319();
+    CCCJ318();
 }
 
 // Not work
@@ -107,6 +109,7 @@ void CCCS101() {
         cout << C[x];
     }
 }
+// */
 
 // Work
 void CCCS119() {
@@ -156,6 +159,7 @@ void CCCS119() {
     cout << topLeft << " " << topRight << endl;
     cout << bottomLeft << " " << bottomRight << endl;
 }
+// */
 
 // Unifinished
 void CCCS219() {
@@ -191,6 +195,7 @@ void CCCS219() {
     cout << A << " " << B << endl;
     */
 }
+// */
 
 // Unfinished
 void CCCS319() {
@@ -325,3 +330,17 @@ void CCCS319() {
     cout << r2[0] << " " << r2[1] << " " << r2[2] << endl;
     cout << r3[0] << " " << r3[1] << " " << r3[2] << endl;
 }
+// */
+
+// Work
+void CCCJ318() {
+    int d1, d2, d3, d4;
+    cin >> d1 >> d2 >> d3 >> d4;
+    
+    cout << 0  << " "<< d1 << " " << d1+d2 << " " << d1+d2+d3 << " " << d1+d2+d3+d4 << " " << endl;
+    cout << d1 << " " << 0 << " " <<  d2 << " " << d2+d3 << " " << d2+d3+d4 << " " << endl;
+    cout << d1+d2 << " " << d2 << " " << 0 << " " << d3 << " " << d3+d4 << " " << endl;
+    cout << d1+d2+d3 << " " << d2+d3 << " " << d3 << " " << 0 << " " << d4 << " " << endl;
+    cout << d1+d2+d3+d4 << " " << d2+d3+d4 << " " << d3+d4 << " " << d4 << " " << 0 << " " << endl;
+}
+// */
