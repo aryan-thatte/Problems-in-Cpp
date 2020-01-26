@@ -5,9 +5,8 @@
 #include <vector>
 using namespace std;
 
-
-/*
-int CCCS101() {
+// Not work
+void CCCS101() {
     
     string cards;
     vector <char> C (13);
@@ -96,19 +95,63 @@ int CCCS101() {
     for (int x = 0; x < 13; x++) {
         cout << C[x];
     }
-    
-    return 0;
 }
-*/
 
-int CCCS118() {
+// Work
+void CCCS119() {
     int topLeft = 1;
     int topRight = 2;
     int bottomLeft = 3;
-    int bootomRight = 4;
+    int bottomRight = 4;
+    int H = 0;
+    int V = 0;
     string flips;
 
     cin >> flips;
 
-    for
+    for (int x = 0; x < flips.length(); x++) {
+        if (flips.at(x) == 'H')
+        {
+            H++;
+        }
+        else
+        {
+            V++;
+        }       
+    }
+
+    if (H % 2 == 1 &&  V % 2 == 1)
+    {
+        topLeft = 4;
+        topRight = 3;
+        bottomLeft = 2;
+        bottomRight = 1;
+    }
+    else if (H % 2 == 1)
+    {
+        topLeft = 3;
+        topRight = 4;
+        bottomLeft = 1;
+        bottomRight = 2;
+    }
+    else if (V % 2 == 1)
+    {
+        topLeft = 2;
+        topRight = 1;
+        bottomLeft = 4;
+        bottomRight = 3;
+    }
+    
+    cout << topLeft << " " << topRight << endl;
+    cout << bottomLeft << " " << bottomRight << endl;
+}
+
+//
+void CCCS219() {
+
+}
+
+// Call it
+int main () {
+    
 }
